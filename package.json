@@ -13,12 +13,12 @@
     "languages": [{
       "id": "hoi4l",
       "aliases": ["HOI4 Localisation", "hoi4l"],
-      "extensions": [".yaml .yml"],
+      "extensions": [".yaml", ".yml"],
       "configuration": "./language-configuration.json"
     }],
     "grammars": [{
       "language": "hoi4l",
-      "scopeName": "source.yaml source.yml",
+      "scopeName": "source.yaml",
       "path": "./syntaxes/hoi4l.tmLanguage.json"
     }]
   }

@@ -1,21 +1,31 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "HOI4 Localisation",
-	"patterns": [
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
-		}
-	],
+	"patterns": [{"include": "#comments"}, {"include": "#tags"}, {"include": "#strings"}, {"include": "#numbers"}],
+
 	"repository": {
-		"keywords": {
+
+		"comments": {
 			"patterns": [{
-				"name": "keyword.control.hoi4l",
-				"match": "\\b(if|while|for|return)\\b"
+				"name": "comment.line.number-sign.hoi4l",
+				"match": "^[\\S|\\s]*#.*"
 			}]
 		},
+
+		"tags": {
+			"patterns": [{
+				"name": "entity.name.tag.hoi4l",
+				"match": "^([^:]+):"
+			}]
+		},
+
+		"numbers": {
+			"patterns": [{
+				"name": "constant.numeric.hoi4l",
+				"match": "[0-9]"
+			}]
+		},
+
 		"strings": {
 			"name": "string.quoted.double.hoi4l",
 			"begin": "\"",
