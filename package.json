@@ -1,0 +1,25 @@
+{
+  "name": "hoi4-localisation",
+  "displayName": "HOI4 Localisation",
+  "description": "Syntax highlighting for HOI4 localisation files",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "hoi4l",
+      "aliases": ["HOI4 Localisation", "hoi4l"],
+      "extensions": [".yaml .yml"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "hoi4l",
+      "scopeName": "source.yaml source.yml",
+      "path": "./syntaxes/hoi4l.tmLanguage.json"
+    }]
+  }
+}
